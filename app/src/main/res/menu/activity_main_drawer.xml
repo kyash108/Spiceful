@@ -6,23 +6,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@id/veg"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/veg"
             android:title="Vegetarian Recipes" />
         <item
             android:id="@+id/nonVeg"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/nonveg"
             android:title="Non-Vegetarian Recipes" />
         <item
             android:id="@+id/request"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/request"
             android:title="Request a recipe" />
         <item
-            android:id="@+id/share"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Share this app" />
-        <item
             android:id="@+id/contactUs"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/contact"
             android:title="Contact Us" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/share"
+            android:title="Share this app" />
+
     </group>
 </menu>
