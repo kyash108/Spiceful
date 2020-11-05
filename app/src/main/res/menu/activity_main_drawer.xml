@@ -5,16 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@id/veg"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="Vegetarian Recipes" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nonVeg"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="Non-Vegetarian Recipes" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/request"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="Request a recipe" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Share this app" />
+        <item
+            android:id="@+id/contactUs"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Contact Us" />
     </group>
 </menu>
