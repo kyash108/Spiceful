@@ -7,23 +7,23 @@
         <item
             android:id="@id/veg"
             android:icon="@drawable/veg"
-            android:title="Vegetarian Recipes" />
+            android:title="@string/vegetarian_recipes" />
         <item
             android:id="@+id/nonVeg"
             android:icon="@drawable/nonveg"
-            android:title="Non-Vegetarian Recipes" />
+            android:title="@string/non_vegetarian_recipes" />
         <item
             android:id="@+id/request"
             android:icon="@drawable/request"
-            android:title="Request a recipe" />
+            android:title="@string/request_a_recipe" />
         <item
             android:id="@+id/contactUs"
             android:icon="@drawable/contact"
-            android:title="Contact Us" />
+            android:title="@string/contact_us" />
         <item
             android:id="@+id/share"
             android:icon="@drawable/share"
-            android:title="Share this app" />
+            android:title="@string/share_this_app" />
 
     </group>
 </menu>

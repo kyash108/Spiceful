@@ -13,4 +13,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="appName">Spiceful</string>
+    <string name="vegetarian_recipes">Vegetarian Recipes</string>
+    <string name="non_vegetarian_recipes">Non-Vegetarian Recipes</string>
+    <string name="request_a_recipe">Request a recipe</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="share_this_app">Share this app</string>
 </resources>
