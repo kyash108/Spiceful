@@ -75,7 +75,7 @@ public class contactUs extends Fragment {
                     startActivity(intent);
                 }
             });
-        
+
         Button email=view.findViewById(R.id.email);
         email.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -24,6 +24,5 @@
             android:id="@+id/share"
             android:icon="@drawable/share"
             android:title="@string/share_this_app" />
-
     </group>
 </menu>

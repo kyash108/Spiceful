@@ -6,4 +6,5 @@
     <color name="colorPrimaryDark">#DD4141</color>
     //message icon color
     <color name="colorAccent">#DD4141</color>
+    <color name="bgColor">#040303</color>
 </resources>
