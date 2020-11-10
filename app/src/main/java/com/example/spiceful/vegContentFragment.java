@@ -16,10 +16,11 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link veg#newInstance} factory method to
+ * Use the {@link vegContentFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
-public class veg extends Fragment {
+public class vegContentFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,12 +28,8 @@ public class veg extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
+    private int mParam1;
     private String mParam2;
-
-    public veg() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -40,23 +37,27 @@ public class veg extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment veg.
+     * @return A new instance of fragment vegContentFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static veg newInstance(String param1, String param2) {
-        veg fragment = new veg();
+    public static vegContentFragment newInstance(int param1, String param2) {
+        vegContentFragment fragment = new vegContentFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
+        args.putInt(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public vegContentFragment() {
+        // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam1 = getArguments().getInt(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
@@ -65,32 +66,16 @@ public class veg extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_veg, container, false);
-        CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
-        ViewPager viewPager = view.findViewById(R.id.photos);
-        viewPager.setAdapter(adapter);
+        View view =  inflater.inflate(R.layout.fragment_veg_content, container, false);
+
+        if(mParam1 !=0) {
+            ImageView imageView = view.findViewById(R.id.image);
+            imageView.setImageResource(mParam1);
+        }
+        if(mParam2 !=null) {
+            TextView description = view.findViewById(R.id.decription);
+            description.setText(mParam2);
+        }
         return view;
-    }
-    public class CustomViewPagerAdapter extends FragmentPagerAdapter {
-
-        public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
-            super(fm);
-        }
-
-        @NonNull
-        @Override
-        public Fragment getItem(int position) {
-            switch (position){
-                case 0: return vegContentFragment.newInstance(R.drawable.ic_baseline_alternate_email_24,"erfgdgsd");
-                case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"");
-                default: return vegContentFragment.newInstance(R.drawable.facebook,"");
-
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return 2;
-        }
-    }
+}
 }
