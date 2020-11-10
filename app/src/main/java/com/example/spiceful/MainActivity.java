@@ -50,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        FloatingActionButton message= findViewById(R.id.fab);
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto: 2262262260"));
+                intent.putExtra("sms_body", "I am having troubles with the following:");
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
