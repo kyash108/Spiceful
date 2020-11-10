@@ -1,5 +1,9 @@
 package com.example.spiceful;
 
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +64,61 @@ public class contactUs extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact_us, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
+
+        Button facebook=view.findViewById(R.id.facebook);
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+                public void onClick(View v) {
+                    Uri facebook = Uri.parse("https://www.facebook.com/kyash108/");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, facebook);
+                    startActivity(intent);
+                }
+            });
+        
+        Button email=view.findViewById(R.id.email);
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[]emailAddress={"yashkumartestemail@gmail.com"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL,emailAddress);
+                intent.putExtra(Intent.EXTRA_TEXT,"I would like to report an issue with the following:");
+                startActivity(intent);
+            }
+        });
+
+        Button location = view.findViewById(R.id.maps);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("geo:0,0?q=42.246652, -83.018339(College)");
+                Intent intent = new Intent(Intent.ACTION_VIEW,location);
+                startActivity(intent);
+            }
+        });
+
+        Button phone = view.findViewById(R.id.phone);
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri number = Uri.parse("tel: 226-340-9947");
+                Intent intent = new Intent(Intent.ACTION_DIAL,number);
+                startActivity(intent);
+            }
+        });
+        Button website = view.findViewById(R.id.website);
+        website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("https://ykumar.scweb.ca/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
+            }
+        });
+
+
+        return view;
     }
 }
