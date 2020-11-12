@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -85,7 +86,11 @@ public class contactUs extends Fragment {
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL,emailAddress);
                 intent.putExtra(Intent.EXTRA_TEXT,"I would like to report an issue with the following:");
-                startActivity(intent);
+//                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+//                    Toast.makeText(getActivity(),"No app installed or email account not added in the app",Toast.LENGTH_SHORT).show();
+//                }else {
+                    startActivity(intent);
+//                }
             }
         });
 
