@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.action_settings) {
-            startActivity(new Intent(MainActivity.this,settingsActivityFragment.class));
+        if (item.getItemId() == R.id.settings) {
+            Intent i = new Intent(this,settingsFragment.class);
+            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
