@@ -11,8 +11,15 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +36,7 @@ public class veg extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    TextView description;
 
     public veg() {
         // Required empty public constructor
@@ -66,6 +74,27 @@ public class veg extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_veg, container, false);
+
+        final ListView listView = view.findViewById(R.id.vegListView);
+        description = view.findViewById(R.id.vegDescription);
+        ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
+        dataTypeItemArrayList.add(new ListViewItem("first","description 1\n" +
+                "yoyo\n" +
+                "yoyo\n" +
+                "yoyo"));
+        dataTypeItemArrayList.add(new ListViewItem("second","description 2"));
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,dataTypeItemArrayList);
+        listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                description.setText(((ListViewItem)listView.getItemAtPosition(position)).getDescription());
+            }
+        });
+
+
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.photos);
         viewPager.setAdapter(adapter);
@@ -81,12 +110,13 @@ public class veg extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return vegContentFragment.newInstance(R.drawable.ic_baseline_alternate_email_24,"erfgdgsd");
+                case 0: return vegContentFragment.newInstance(R.drawable.dal,"erfgdgsd");
                 case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"");
                 default: return vegContentFragment.newInstance(R.drawable.facebook,"");
 
             }
         }
+
 
         @Override
         public int getCount() {

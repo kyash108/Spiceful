@@ -87,9 +87,9 @@ public class contactUs extends Fragment {
                 intent.putExtra(Intent.EXTRA_EMAIL,emailAddress);
                 intent.putExtra(Intent.EXTRA_TEXT,"I would like to report an issue with the following:");
 //                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-//                    Toast.makeText(getActivity(),"No app installed or email account not added in the app",Toast.LENGTH_SHORT).show();
-//                }else {
                     startActivity(intent);
+//                }else {
+//                    Toast.makeText(getActivity(),"No app installed or email account not added in the app",Toast.LENGTH_SHORT).show();
 //                }
             }
         });

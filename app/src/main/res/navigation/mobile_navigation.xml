@@ -29,4 +29,9 @@
         android:name="com.example.spiceful.share"
         android:label="Share this app"
         tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/credit"
+        android:name="com.example.spiceful.Credit"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credit" />
 </navigation>
