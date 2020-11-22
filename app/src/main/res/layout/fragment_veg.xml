@@ -10,14 +10,16 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/photos"
         android:layout_width="match_parent"
-        android:layout_height="314dp"
+        android:layout_height="226dp"
         android:paddingTop="20dp"></androidx.viewpager.widget.ViewPager>
 
     <ListView
         android:id="@+id/vegListView"
-        android:layout_width="match_parent"
-        android:layout_height="305dp"
-        android:background="#BC7979" />
+        android:layout_width="370dp"
+        android:layout_height="255dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:hapticFeedbackEnabled="true" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -27,10 +29,12 @@
             android:id="@+id/vegDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/textview"
+            android:textAlignment="textStart"
             android:textColor="#C1B2B2"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
     </androidx.core.widget.NestedScrollView>
 
 

@@ -78,13 +78,39 @@ public class veg extends Fragment {
         final ListView listView = view.findViewById(R.id.vegListView);
         description = view.findViewById(R.id.vegDescription);
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
-        dataTypeItemArrayList.add(new ListViewItem("first","description 1\n" +
-                "yoyo\n" +
-                "yoyo\n" +
-                "yoyo"));
-        dataTypeItemArrayList.add(new ListViewItem("second","description 2"));
+        dataTypeItemArrayList.add(new ListViewItem("Aloo Matar","Ingredients: \n" +
+                "1)Potato                                     1/2 Kg\n"+
+                "2)Peas                                        1 Cup\n"+
+                "3)Onions                                     6\n"+
+                "4)Tomato                                   1/4 Kg\n"+
+                "5)Ginger Garlic Paste               2 Teaspoons\n"+
+                "6)Corriander Powder                1 TableSpoons\n"+
+                "7)Tumeric Powder                    1 Teaspoons\n"+
+                "8)Garam Massala Powder      1 Teaspoons\n"+
+                "9)Red Chilly Powder                 2 1/2 TableSpoons\n"+
+                "10)Oil                                           3 TableSpoons\n"+
+                "11)Corriander Leaves               1 TableSpoons\n"+
+                "\n"+"\n"+
+                "Method\n"+
+                "1) Cut onions into big pieces and grind to a coarse paste. \n"+
+                "2) Chop the tomatoes finely.\n"+
+                "3) Boil potatoes in pressure cooker. \n"+
+                "4) Peel and dice them. \n"+
+                "5) Cook peas and keep aside.\n"+
+                "6) Heat oil in a frying pan, season with jeera or aniseed, fry the ginger-garlic paste for a minute.\n"+
+                "7) Add onion paster and fry till it turns golden brown in colour. \n"+
+                "8) Add chopped tomatoes and fry for fre muinutes.\n"+
+                "9) When the tomatoes become soft, add corriander powder, tumeric powder, garam massala, sald and chilly powder.\n"+
+                "10) Fry till oil seprates from the massala.\n"+
+                "11) Pour enought water along with boilder peas and potatoes.\n"+
+                "12) Cook till the gravy becomes thick.\n"+
+                "13) Serve hot, garnished with corriander leaves\n"));
+        dataTypeItemArrayList.add(new ListViewItem("Matar Paneer","description 2"));
+        dataTypeItemArrayList.add(new ListViewItem("Bhindi Massala","description 2"));
+        dataTypeItemArrayList.add(new ListViewItem("Paneer Bhurji","description 2"));
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,dataTypeItemArrayList);
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),R.layout.list,dataTypeItemArrayList);
         listView.setAdapter(arrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -100,6 +126,7 @@ public class veg extends Fragment {
         viewPager.setAdapter(adapter);
         return view;
     }
+
     public class CustomViewPagerAdapter extends FragmentPagerAdapter {
 
         public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
@@ -110,9 +137,12 @@ public class veg extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return vegContentFragment.newInstance(R.drawable.dal,"erfgdgsd");
-                case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"");
-                default: return vegContentFragment.newInstance(R.drawable.facebook,"");
+                case 0: return vegContentFragment.newInstance(R.drawable.dal,"Aloo Matar");
+                case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Matar Paneer");
+                case 2: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Bhindi Massala");
+                case 3: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Paneer Bhurji");
+
+                default: return vegContentFragment.newInstance(R.drawable.facebook,"Mutter Paneer");
 
             }
         }
