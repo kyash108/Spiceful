@@ -24,5 +24,5 @@
     <string name="website">Website</string>
     <string name="facebook">Facebook</string>
     <string name="blank">blank</string>
-    <string name="textview">Instructions</string>
+    <string name="textview">Ingredients: \n\n\nMethod:</string>
 </resources>

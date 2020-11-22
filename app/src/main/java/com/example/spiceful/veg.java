@@ -79,19 +79,19 @@ public class veg extends Fragment {
         description = view.findViewById(R.id.vegDescription);
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
         dataTypeItemArrayList.add(new ListViewItem("Aloo Matar","Ingredients: \n" +
-                "1)Potato                                     1/2 Kg\n"+
-                "2)Peas                                        1 Cup\n"+
-                "3)Onions                                     6\n"+
-                "4)Tomato                                   1/4 Kg\n"+
-                "5)Ginger Garlic Paste               2 Teaspoons\n"+
-                "6)Corriander Powder                1 TableSpoons\n"+
-                "7)Tumeric Powder                    1 Teaspoons\n"+
-                "8)Garam Massala Powder      1 Teaspoons\n"+
-                "9)Red Chilly Powder                 2 1/2 TableSpoons\n"+
-                "10)Oil                                           3 TableSpoons\n"+
-                "11)Corriander Leaves               1 TableSpoons\n"+
+                "1) Potato                                     1/2 Kg\n"+
+                "2) Peas                                        1 Cup\n"+
+                "3) Onions                                     6\n"+
+                "4) Tomato                                   1/4 Kg\n"+
+                "5) Garlic Paste                            2 Teaspoons\n"+
+                "6) Coriander Powder                1 tablespoons\n"+
+                "7) Tumeric Powder                    1 Teaspoons\n"+
+                "8) Garam Massala Powder      1 Teaspoons\n"+
+                "9) Red Chilly Powder                 2 1/2 tablespoons\n"+
+                "10)Oil                                            3 tablespoons\n"+
+                "11)Coriander Leaves                As Required\n"+
                 "\n"+"\n"+
-                "Method\n"+
+                "Method:\n"+
                 "1) Cut onions into big pieces and grind to a coarse paste. \n"+
                 "2) Chop the tomatoes finely.\n"+
                 "3) Boil potatoes in pressure cooker. \n"+
@@ -105,9 +105,87 @@ public class veg extends Fragment {
                 "11) Pour enought water along with boilder peas and potatoes.\n"+
                 "12) Cook till the gravy becomes thick.\n"+
                 "13) Serve hot, garnished with corriander leaves\n"));
-        dataTypeItemArrayList.add(new ListViewItem("Matar Paneer","description 2"));
-        dataTypeItemArrayList.add(new ListViewItem("Bhindi Massala","description 2"));
-        dataTypeItemArrayList.add(new ListViewItem("Paneer Bhurji","description 2"));
+        dataTypeItemArrayList.add(new ListViewItem("Matar Paneer","Ingredients: \n"+
+                "1)  Green peas(Fresh)              1/2 Kg\n"+
+                "2)  Paneer (Indian Cheese)     400 grams\n"+
+                "3)  Tomatoes                            2\n"+
+                "4)  Oil (For deep frying)           As required\n"+
+                "5)  Butter                                   2 1/2 tablespoons\n"+
+                "6)  Salt                                       As required\n"+
+                "7)  Coriander leaves                As required\n"+
+                "8)  Chiily Powder                      2 teaspoons\n"+
+                "9)  Garam Massala                  1 teaspoons\n"+
+                "10) Cumin Seeds                     1/2 teaspoons\n"+
+                "11) Turmeric Powder              1/4 teaspoons\n"+
+                "12) Cardamoms                       2\n"+
+                "13) Poppy Seeds                      1 tablespoon\n"+
+                "14) Cashew Nuts                     5\n"+
+                "15) Onions                                2\n"+
+                "16) Ginger                                1/2 inch piece\n"+
+                "17) Garlic                                  6 flakes\n"+"\n"+"\n"+
+                "Method:\n"+
+                "1) Boil peas and keep aside.\n"+
+                "2) Cut paneer into pieces and deep fry.\n"+
+                "3) Keep it aside, plunged in warm water.\n"+
+                "4) Grind the massala.\n"+
+                "5) Heat oil in a frying pan, add ground paste and fry till oil separates.\n"+
+                "6) Add boilded peas and chopped tomatoes, enough water and salt.\n"+
+                "7) Boil till gravy thickens, mix fired paneer and a little beaten cream.\n"+
+                "8) Garnish with coriander leaves.\n"+
+                "9) Serve hot accompanied with cut onions and lime to tandoori naan or flat bread.\n"));
+        dataTypeItemArrayList.add(new ListViewItem("Bhindi Massala","Ingredients: \n"+
+                "1) Okra                                     1/2 Kg\n"+
+                "2) Green chillies                      3\n"+
+                "3) Red chilly powder              1 1/2 teaspoons\n"+
+                "4) Salt                                       As required\n"+
+                "5) Coriander powder              2 teaspoons\n"+
+                "6) Jeera powder                     1/2 teaspoon\n"+
+                "7) Sugar                                   1 teaspoon\n"+
+                "8) Tomato                                1\n"+
+                "9) Curd                                     2 Cups\n"+
+                "10) Garam Massala               1/2 teaspoon\n"+
+                "11) Cashew nuts                    15\n"+
+                "12) Onions                               4\n"+
+                "13) Poppy Seeds                    1 tablespoon\n"+
+                "14) Oil (For deep frying)        As required\n\n\n"+
+                "Method:\n"+
+                "1) Cut ladies finger into 1 1/2 inch length pieces.\n"+
+                "2) Deep fry in hot oil till light brown. (Do not over fry since it may become crisp).\n"+
+                "3) Dice onions and tomatoes into 1 inch pieces.\n"+
+                "4) Slit green chillies vertically.\n"+
+                "5) Dry roast poppy and cashew nuts separately.\n"+
+                "6) Fry onions till transparent in little oil.\n"+
+                "7) Grind these onions with roasted Ingredients: to smooth paste.\n"+
+                "8) Heat oil in fry in pan, tamper aniseeds or cumin seeds with little fenugreek seeds.\n"+
+                "9) Put slit chillies and ground massala.\n"+
+                "10) Stir constantly in medium flame till golden brown in colour.\n"+
+                "11) Add sugar, salt, chilly powder, dhania, jeera powder and continue frying till oil seprates.\n"+
+                "12) To this mix strained and whipped curds and continue frying till oil floats on top.\n"+
+                "13) Add cut tomatoes and ladies finger.\n"+
+                "14) Allow it to boil for a few minutrs.\n"+
+                "15) Serve hot.\n"));
+        dataTypeItemArrayList.add(new ListViewItem("Paneer Bhurji","Ingredients: \n"+
+                "1) Paneer (Indian Cheese)     400 grams\n"+
+                "2) Onion                                    1 (Chopped)\n"+
+                "3) Tomato                                 1 (Finely chopped)\n"+
+                "4) Ginger garlic paste             1 teaspoon\n"+
+                "5) Green chilli                           1 (Chopped)\n"+
+                "6) Tumeric powder                  1/4 teaspoon\n"+
+                "7) Chilli powder                        1 teaspoon\n"+
+                "8) Garam Massala                   1/4 teaspoon\n"+
+                "9) Kasuri methi                         1 teaspoon\n"+
+                "10) Salt                                      To taste\n"+
+                "11) Coriander leaves               2 Stalks (Finely chopped)\n"+
+                "12) Oil                                        1 tablespoon \n"+
+                "13) Cumin seeds                     1 teaspoon\n\n\n"+
+                "Method:\n"+
+                "1) Crumble up the paneer in a bowl. If you are making homemade paneer, after draining the liquid, keep it ready.\n"+
+                "2) Heat oil in a kadai,, pop cumin seeds. Add the chopped onions, green chilli and saute till it becomes golden brown.\n"+
+                "3) Add ginger garlic paster followed by chopped tomatoes. Cook till the tomatoes are totally mashed up.\n"+
+                "4) Add the turmic powder, red chilli powder, required salt and garam massala. Reduce the flame and cook for 1-2 minutes.\n"+
+                "5) Now add the crumbled paneer and gently mix together.\n"+
+                "6) Once the paneer is well mixed, add crushed kasuri methi. Cook for couple for minutes and switch off. Do not cook it longer.\n"+
+                "7) Finally add chopped coriander leaves and serve.\n"));
 
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),R.layout.list,dataTypeItemArrayList);
