@@ -78,7 +78,7 @@ public class veg extends Fragment {
         final ListView listView = view.findViewById(R.id.vegListView);
         description = view.findViewById(R.id.vegDescription);
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
-        dataTypeItemArrayList.add(new ListViewItem("Aloo Matar","Ingredients: \n" +
+        dataTypeItemArrayList.add(new ListViewItem("Aloo Matar Curry","Ingredients: \n" +
                 "1) Potato                                     1/2 Kg\n"+
                 "2) Peas                                        1 Cup\n"+
                 "3) Onions                                     6\n"+
@@ -105,7 +105,7 @@ public class veg extends Fragment {
                 "11) Pour enought water along with boilder peas and potatoes.\n"+
                 "12) Cook till the gravy becomes thick.\n"+
                 "13) Serve hot, garnished with corriander leaves\n"));
-        dataTypeItemArrayList.add(new ListViewItem("Matar Paneer","Ingredients: \n"+
+        dataTypeItemArrayList.add(new ListViewItem("Matar Paneer Curry","Ingredients: \n"+
                 "1)  Green peas(Fresh)              1/2 Kg\n"+
                 "2)  Paneer (Indian Cheese)     400 grams\n"+
                 "3)  Tomatoes                            2\n"+
@@ -215,12 +215,12 @@ public class veg extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return vegContentFragment.newInstance(R.drawable.dal,"Aloo Matar");
-                case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Matar Paneer");
+                case 0: return vegContentFragment.newInstance(R.drawable.dal,"Aloo Matar Curry");
+                case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Matar Paneer Curry");
                 case 2: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Bhindi Massala");
                 case 3: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Paneer Bhurji");
 
-                default: return vegContentFragment.newInstance(R.drawable.facebook,"Mutter Paneer");
+                default: return vegContentFragment.newInstance(R.drawable.facebook,"Mutter Paneer Curry");
 
             }
         }
@@ -228,7 +228,7 @@ public class veg extends Fragment {
 
         @Override
         public int getCount() {
-            return 2;
+            return 4;
         }
     }
 }

@@ -25,4 +25,11 @@
     <string name="facebook">Facebook</string>
     <string name="blank">blank</string>
     <string name="textview">Ingredients: \n\n\nMethod:</string>
+    <string name="recipe_name_viewPager">Recipe Name</string>
+    <string name="requestDishName">Name</string>
+    <string name="nameHint">Enter the name of dish here</string>
+    <string name="requestDishEmail">Email</string>
+    <string name="requestDishEmailHint">Please enter your email here</string>
+    <string name="requestDishUsername">Please enter your name here</string>
+    <string name="recipeRequested">Recipe(s) Requested</string>
 </resources>

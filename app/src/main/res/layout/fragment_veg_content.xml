@@ -19,5 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="TextView" />
+        android:text="@string/recipe_name_viewPager"
+        android:textColor="#E4E4E4"
+        android:textSize="20sp" />
 </LinearLayout>

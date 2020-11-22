@@ -16,7 +16,7 @@
     <ListView
         android:id="@+id/vegListView"
         android:layout_width="370dp"
-        android:layout_height="255dp"
+        android:layout_height="262dp"
         android:layout_gravity="center"
         android:background="@color/colorAccent"
         android:hapticFeedbackEnabled="true" />
