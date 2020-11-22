@@ -1,5 +1,6 @@
 package com.example.spiceful;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -60,6 +61,14 @@ public class share extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_share, container, false);
+        View view= inflater.inflate(R.layout.fragment_share, container, false);
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        String shareBody="Download this application from https://ykumar.scweb.ca/";
+        String shareSub="Spiceful Recipe App";
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
+        shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+        startActivity(Intent.createChooser(shareIntent,"Share Using"));
+        return view;
     }
 }
