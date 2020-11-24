@@ -3,10 +3,14 @@ package com.example.spiceful;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +63,19 @@ public class Credit extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_credit, container, false);
+        View view = inflater.inflate(R.layout.fragment_credit, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.recycle);
+        ArrayList<Term> terms = new ArrayList<>();
+        terms.add(new Term("BANNER", "Photo by Joel Rohland on Unsplash - banner"));
+        terms.add(new Term("IMAGE WELCOME 1","Photo by Adam Birkett on Unsplash"));
+        terms.add(new Term("IMAGE WELCOME 2","Image by 3D Animation Production Company from Pixabay"));
+        terms.add(new Term("IMAGE WELCOME 3","Photo by Bram Van Oost on Unsplash"));
+        terms.add(new Term("IMAGE WELCOME 4","Image by Bruno /Germany from Pixabay"));
+        //layout manager
+//        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        //adaptor
+        recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms));
+        return view;
     }
 }

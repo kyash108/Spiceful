@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <PreferenceCategory-->
+<!--        android:key="expandable"-->
+<!--        android:title="Brightness"-->
+<!--        app:inititalExpandedChildrenCount="1">-->
+<!--        <SeekBarPreference-->
+<!--            android:key="intent_preference"-->
+<!--            android:tittle="Adjust bright"-->
+<!--            android:summary="Wallapepr"-->
+<!--            />-->
+<!--        <DropDownPreference-->
+<!--            android:key="drop_down_preferencce"-->
+<!--            android:tittle="device theme"-->
+<!--            android:summary="automatic"-->
+<!--            android:entries="entru"-->
+<!--            android:entryValues="entry "-->
+<!--            />-->
+<!--    </PreferenceCategory>-->
 
 </PreferenceScreen>
