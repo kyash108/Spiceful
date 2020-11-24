@@ -8,9 +8,33 @@
     tools:context=".nonVeg">
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/novegPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:paddingTop="20dp"></androidx.viewpager.widget.ViewPager>
+
+    <ListView
+        android:id="@+id/nonVegListView"
+        android:layout_width="370dp"
+        android:layout_height="262dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent"
+        android:hapticFeedbackEnabled="true" />
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </androidx.viewpager.widget.ViewPager>
+        <TextView
+            android:id="@+id/nonVegDescriptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/textview"
+            android:textAlignment="textStart"
+            android:textColor="#C1B2B2"
+            android:textSize="15sp" />
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

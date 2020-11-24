@@ -2,11 +2,21 @@ package com.example.spiceful;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,10 +29,12 @@ public class nonVeg extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    TextView description;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public nonVeg() {
         // Required empty public constructor
@@ -59,6 +71,54 @@ public class nonVeg extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_non_veg, container, false);
+
+        View view= inflater.inflate(R.layout.fragment_non_veg, container, false);
+
+        final ListView nonVegListView = view.findViewById(R.id.nonVegListView);
+        description = view.findViewById(R.id.nonVegDescriptions);
+
+
+        ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
+        dataTypeItemArrayList.add(new ListViewItem("Aloo Matar Curry","Ingredients: "));
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),R.layout.list,dataTypeItemArrayList);
+        nonVegListView.setAdapter(arrayAdapter);
+
+        nonVegListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                description.setText(((ListViewItem)nonVegListView.getItemAtPosition(position)).getDescription());
+            }
+        });
+
+        CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
+        ViewPager viewPager = view.findViewById(R.id.novegPhotos);
+        viewPager.setAdapter(adapter);
+        return view;
+    }
+    public static class CustomViewPagerAdapter extends FragmentPagerAdapter {
+
+        public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0: return non_veg_contentFragment.newInstance(R.drawable.dal,"Aloo Matar Curry");
+                case 1: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Matar Paneer Curry");
+                case 2: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Bhindi Massala");
+                case 3: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Paneer Bhurji");
+
+                default: return non_veg_contentFragment.newInstance(R.drawable.facebook,"Mutter Paneer Curry");
+
+            }
+        }
+        @Override
+        public int getCount() {
+            return 4;
+        }
     }
 }
+

@@ -205,7 +205,7 @@ public class veg extends Fragment {
         return view;
     }
 
-    public class CustomViewPagerAdapter extends FragmentPagerAdapter {
+    public static class CustomViewPagerAdapter extends FragmentPagerAdapter {
 
         public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
