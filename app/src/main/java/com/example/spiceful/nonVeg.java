@@ -77,9 +77,56 @@ public class nonVeg extends Fragment {
         final ListView nonVegListView = view.findViewById(R.id.nonVegListView);
         description = view.findViewById(R.id.nonVegDescriptions);
 
-
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
-        dataTypeItemArrayList.add(new ListViewItem("Aloo Matar Curry","Ingredients: "));
+        dataTypeItemArrayList.add(new ListViewItem("Butter Chicken","Ingredients: \n" +
+                "For the chicken marinade:\n" +
+                "Boneless chicken breasts        800g\n" +
+                "Plain yogurt                                 1/2 cup\n" +
+                "Minced garlic                              1 1/2 tablespoons\n" +
+                "Minced ginger                             1 tablespoon\n" +
+                "Garam masala                            2 teaspoons\n" +
+                "Tumeric                                        1 teaspoon\n" +
+                "Ground cumin                             1 teaspoon\n" +
+                "Red Chili Powder                        1 teaspoon\n" +
+                "Salt                                               1 teaspoon\n" +
+                "For the sauce:\n" +
+                "olive oil                                       2 tablespoons \n" +
+                "Butter                                          2 tablespoons\n" +
+                "Onion (chopped)                      1 large \n" +
+                "Minced garlic                            1 1/2 tablespoons\n" +
+                "Minced ginger grated              1 tablespoon\n" +
+                "Ground cumin                           1 1/2 teaspoons\n" +
+                "Garam Massala                        1 1/2 teaspoons\n" +
+                "Ground coriander                      1 teaspoon\n" +
+                "Crushed tomatoes                    400 g\n" +
+                "Red Chilli Powder                     1 teaspoon\n" +
+                "Salt                                              1 1/4 teaspoons\n" +
+                "Heavy cream                              1 cup\n" +
+                "Sugar                                           1 tablespoon\n" +
+                "Dried fenugreek leaves             1/2 teaspoon\n\n\n" +
+                "Method:\n" +
+                "1) In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 30 minutes to an hour (or overnight if time allows). \n" +
+                "2) Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces in batches of two or three, making sure not to crowd the pan. Fry until browned for only 3 minutes on each side. Set aside and keep warm. (You will finish cooking the chicken in the sauce.)\n" +
+                "3) Heat butter or ghee in the same pan. Fry the onions until they start to sweat (about 6 minutes) while scraping up any browned bits stuck on the bottom of the pan. \n" +
+                "4) Add garlic and ginger and sauté for 1 minute until fragrant, then add ground coriander, cumin and garam masala. Let cook for about 20 seconds until fragrant, while stirring occasionally.\n" +
+                "5) Add crushed tomatoes, chili powder and salt. Let simmer for about 10-15 minutes, stirring occasionally until sauce thickens and becomes a deep brown red colour.\n" +
+                "6) Remove from heat, scoop mixture into a blender and blend until smooth. You may need to add a couple tablespoons of water to help it blend (up to 1/4 cup). Work in batches depending on the size of your blender.\n" +
+                "7) Pour the puréed sauce back into the pan. Stir the cream, sugar and crushed kasoori methi (or fenugreek leaves) through the sauce. Add the chicken with juices back into the pan and cook for an additional 8-10 minutes until chicken is cooked through and the sauce is thick and bubbling.\n" +
+                "8) Garnish with chopped cilantro and serve with fresh, hot garlic butter rice and fresh homemade Naan bread!\n"));
+        dataTypeItemArrayList.add(new ListViewItem("Chicken Biryani","Ingredients: \n" +
+                "" +
+                "\n\n\n" +
+                "Method:\n" +
+                "1) To marinate the chicken for the biryani, combine the vegetable oil, garlic, ginger, chili peppers, mint, cilantro, garam masala, cinnamon and salt in a large bowl and stir together. Add the chicken pieces and toss together making sure the chicken is thoroughly coated in the marinade. Allow the chicken to marinate for at least 1 hour or up to overnight.\n" +
+                "2) In a pot wide enough to hold the chicken in a single layer, add the ghee and onions and saute the onions until they are well caramelized (15-20 minutes). Transfer the caramelized onions to a bowl and set aside.\n" +
+                "3) While the onions caramelize, prepare the rice by washing in a strainer under cold running water until the water runs clear.\n" +
+                "4) To par-boil the rice, add the water, salt, cardamom, cumin and bay leaf to a pot and bring to a boil. Add the rice and boil for 7 minutes. Drain the rice, reserving 1 cup of the liquid.\n" +
+                "5) In the pot you caramelized the onions in, add the chicken in a single layer, skin-side down. Fry until golden brown on one side (about 5 minutes). Flip the chicken over and fry the other side until golden brown. Transfer the chicken back to the bowl you marinated it in.\n" +
+                "6) To assemble the biryani, add the saffron to the rice and toss to distribute evenly. Add half the rice mixture to the bottom of the pot you browned the chicken in.\n" +
+                "7) Top the rice with the chicken in a single layer.\n" +
+                "8) Top the chicken with an even layer of caramelized onions.\n"));
+        dataTypeItemArrayList.add(new ListViewItem("Kadhai Chicken","Ingredients: "));
+        dataTypeItemArrayList.add(new ListViewItem("Chicken Tikka","Ingredients: "));
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),R.layout.list,dataTypeItemArrayList);
         nonVegListView.setAdapter(arrayAdapter);

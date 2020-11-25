@@ -28,6 +28,10 @@
             android:id="@+id/share"
             android:icon="@drawable/share"
             android:title="@string/share_this_app" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings" />
 
     </group>
 </menu>

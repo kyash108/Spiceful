@@ -34,4 +34,9 @@
         android:name="com.example.spiceful.Credit"
         android:label="Credits"
         tools:layout="@layout/fragment_credit" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.example.spiceful.settingFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_setting" />
 </navigation>
