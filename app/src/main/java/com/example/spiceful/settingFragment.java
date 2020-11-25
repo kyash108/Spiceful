@@ -14,6 +14,9 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  * Use the {@link settingFragment#newInstance} factory method to
  * create an instance of this fragment.
+ * @author Yash Kumar
+ * @version 1.0
+ * @since   2020-11-25
  */
 public class settingFragment extends Fragment {
 
