@@ -66,11 +66,11 @@ public class Credit extends Fragment {
         View view = inflater.inflate(R.layout.fragment_credit, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
         ArrayList<Term> terms = new ArrayList<>();
-        terms.add(new Term("BANNER", "Photo by Joel Rohland on Unsplash - banner"));
-        terms.add(new Term("IMAGE WELCOME 1","Photo by Adam Birkett on Unsplash"));
-        terms.add(new Term("IMAGE WELCOME 2","Image by 3D Animation Production Company from Pixabay"));
-        terms.add(new Term("IMAGE WELCOME 3","Photo by Bram Van Oost on Unsplash"));
-        terms.add(new Term("IMAGE WELCOME 4","Image by Bruno /Germany from Pixabay"));
+        terms.add(new Term("Image", "Photo by "));
+        terms.add(new Term("IMAGE Image 1","Photo by "));
+        terms.add(new Term("IMAGE Image 2","Image by "));
+        terms.add(new Term("IMAGE Image 3","Photo by"));
+        terms.add(new Term("IMAGE Image 4","Image by "));
         //layout manager
 //        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
