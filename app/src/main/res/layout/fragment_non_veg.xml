@@ -16,7 +16,7 @@
     <ListView
         android:id="@+id/nonVegListView"
         android:layout_width="370dp"
-        android:layout_height="262dp"
+        android:layout_height="198dp"
         android:layout_gravity="center"
         android:background="@color/colorAccent"
         android:hapticFeedbackEnabled="true" />

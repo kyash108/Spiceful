@@ -114,8 +114,26 @@ public class nonVeg extends Fragment {
                 "7) Pour the puréed sauce back into the pan. Stir the cream, sugar and crushed kasoori methi (or fenugreek leaves) through the sauce. Add the chicken with juices back into the pan and cook for an additional 8-10 minutes until chicken is cooked through and the sauce is thick and bubbling.\n" +
                 "8) Garnish with chopped cilantro and serve with fresh, hot garlic butter rice and fresh homemade Naan bread!\n"));
         dataTypeItemArrayList.add(new ListViewItem("Chicken Biryani","Ingredients: \n" +
-                "" +
-                "\n\n\n" +
+                "For the chicken marinade: \n" +
+                "Vegetable oil                               1 tablespoon\n" +
+                "Garlic                                           10 Grams\n" +
+                "Ginger                                          10 Grams \n" +
+                "Chilli peppers                             1\n" +
+                "Cilantro                                       10 Grams\n" +
+                "Garam Massala                         1 tablespoon\n" +
+                "Ground cinnamon                     1/2 teaspoon\n" +
+                "Salt                                             1 teaspoon\n" +
+                "Chicken breats                          900 grams\n" +
+                "For Rice:\n" +
+                "Water                                         6 cups\n" +
+                "Salt                                             2 1/2 teaspoons\n" +
+                "Green Cardamom                    5\n" +
+                "Bay Leaf                                   1\n" +
+                "Basmati rice                             360 grams\n" +
+                "For onion: \n" +
+                "Ghee                                           2 tablespoon\n" +
+                "Medium Onions                        2\n" +
+                "\n\n" +
                 "Method:\n" +
                 "1) To marinate the chicken for the biryani, combine the vegetable oil, garlic, ginger, chili peppers, mint, cilantro, garam masala, cinnamon and salt in a large bowl and stir together. Add the chicken pieces and toss together making sure the chicken is thoroughly coated in the marinade. Allow the chicken to marinate for at least 1 hour or up to overnight.\n" +
                 "2) In a pot wide enough to hold the chicken in a single layer, add the ghee and onions and saute the onions until they are well caramelized (15-20 minutes). Transfer the caramelized onions to a bowl and set aside.\n" +
@@ -125,8 +143,44 @@ public class nonVeg extends Fragment {
                 "6) To assemble the biryani, add the saffron to the rice and toss to distribute evenly. Add half the rice mixture to the bottom of the pot you browned the chicken in.\n" +
                 "7) Top the rice with the chicken in a single layer.\n" +
                 "8) Top the chicken with an even layer of caramelized onions.\n"));
-        dataTypeItemArrayList.add(new ListViewItem("Kadhai Chicken","Ingredients: "));
-        dataTypeItemArrayList.add(new ListViewItem("Chicken Tikka","Ingredients: "));
+        dataTypeItemArrayList.add(new ListViewItem("Kadhai Chicken","Ingredients: \n" +
+                "For the chicken marinade: \n" +
+                "Chicken                                        1 Kg\n" +
+                "Ginger-garlic paste                    1 tablespoon\n" +
+                "Pepper powder                          1/2 tablespoon\n" +
+                "Lime juice                                  1 tablespoon\n" +
+                "Oil                                               1 tablespoon\n" +
+                "Salt                                             1 tablespoon\n" +
+                "For the gravy:\n" +
+                "Tomatoes                                  2\n" +
+                "Green chillies                            2\n" +
+                "Ginger-garlic paste                  1 tablespoon\n" +
+                "Chilli powder                            1 tablespoon\n" +
+                "Black cardamoms                   3\n" +
+                "Cloves                                       3\n" +
+                "Water                                        1 Cup\n" +
+                "For sauteing:\n" +
+                "Onion                                      2 Large\n" +
+                "Ginger                                     1 tablespoon\n" +
+                "Green chillies                         3\n" +
+                "Chilli powder                          2 tablespoon\n" +
+                "Tumeric powder                     1 tablespoon\n" +
+                "Garam Massala                      3/4 tablespoon\n" +
+                "Fenugreek Leaf                      1/2 tablespoon\n" +
+                "Cream                                      1 Cup\n\n\n" +
+
+                "Method: \n" +
+                "1) Marinate chicken with the ingredients mentioned and keep it aside for a while.\n" +
+                "2) Grind all the ingredients for the tomato paste into a fine paste.\n" +
+                "3) In a frying pan, shallow fry chicken pieces to light brown color.\n" +
+                "4) In the same oil add onion, ginger and green chillies for sauteing and stir till onion turn golden brown.\n" +
+                "5) Add chilli powder, turmeric powder, garam masala and kasuri methi.\n" +
+                "6) Now add the tomato mixture and a cup of water.\n" +
+                "7) Once it boils, add fried chicken pieces and mix everything together.\n" +
+                "8) Add a little bit of salt if required.\n" +
+                "9) Pop the lid on and cook for 10 minutes on medium heat.\n" +
+                "10) Once finished cooking, add a cup of cream to give it a rich taste.\n"));
+//        dataTypeItemArrayList.add(new ListViewItem("Chicken Tikka","Ingredients: "));
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(),R.layout.list,dataTypeItemArrayList);
         nonVegListView.setAdapter(arrayAdapter);
@@ -153,18 +207,17 @@ public class nonVeg extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return non_veg_contentFragment.newInstance(R.drawable.dal,"Aloo Matar Curry");
-                case 1: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Matar Paneer Curry");
-                case 2: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Bhindi Massala");
-                case 3: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Paneer Bhurji");
+                case 0: return non_veg_contentFragment.newInstance(R.drawable.dal,"Butter Chicken");
+                case 1: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Chicken Biryani");
+                case 2: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Kadhai Chicken");
 
-                default: return non_veg_contentFragment.newInstance(R.drawable.facebook,"Mutter Paneer Curry");
+                default: return non_veg_contentFragment.newInstance(R.drawable.facebook,"Butter Chicken");
 
             }
         }
         @Override
         public int getCount() {
-            return 4;
+            return 3;
         }
     }
 }
