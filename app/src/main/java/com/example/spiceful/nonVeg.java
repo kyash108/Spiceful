@@ -207,11 +207,11 @@ public class nonVeg extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return non_veg_contentFragment.newInstance(R.drawable.dal,"Butter Chicken");
-                case 1: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Chicken Biryani");
-                case 2: return non_veg_contentFragment.newInstance(R.drawable.ic_baseline_map_24,"Kadhai Chicken");
+                case 0: return non_veg_contentFragment.newInstance(R.drawable.butterchicken,"Butter Chicken");
+                case 1: return non_veg_contentFragment.newInstance(R.drawable.chickenbiryani,"Chicken Biryani");
+                case 2: return non_veg_contentFragment.newInstance(R.drawable.kadhaichicken,"Kadhai Chicken");
 
-                default: return non_veg_contentFragment.newInstance(R.drawable.facebook,"Butter Chicken");
+                default: return non_veg_contentFragment.newInstance(R.drawable.butterchicken,"Butter Chicken ");
 
             }
         }

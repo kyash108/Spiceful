@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/bgColor"
     android:scrollbarSize="40sp">
 
     <TextView
@@ -10,12 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="TextView"
-        android:textSize="40sp" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/descriptionItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp" />
+        android:textColor="#F3F3F3"
+        android:textSize="22sp" />
 </LinearLayout>

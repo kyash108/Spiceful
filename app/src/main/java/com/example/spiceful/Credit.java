@@ -66,11 +66,14 @@ public class Credit extends Fragment {
         View view = inflater.inflate(R.layout.fragment_credit, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
         ArrayList<Term> terms = new ArrayList<>();
-        terms.add(new Term("Image", "Photo by "));
-        terms.add(new Term("IMAGE Image 1","Photo by "));
-        terms.add(new Term("IMAGE Image 2","Image by "));
-        terms.add(new Term("IMAGE Image 3","Photo by"));
-        terms.add(new Term("IMAGE Image 4","Image by "));
+        terms.add(new Term("Picture of Butter Chicken", "Photo by:- The Endless Meal\n https://www.instagram.com/theendlessmeal/"));
+        terms.add(new Term("Picture of Chicken Biryani","Photo by:- Kitchen Sanctuary\n https://www.instagram.com/kitchensanctuary/"));
+        terms.add(new Term("Picture of Kadhai Chicken","Photo by:- Farha Ambreen\n https://www.instagram.com/fariamby/"));
+        terms.add(new Term("Picture of Aloo Matar Curry","Photo by:- Udai Sareen\n https://www.instagram.com/tasteofculturesindia/"));
+        terms.add(new Term("Picture of Matar Paneer Curry","Photo by:- Ujawal's Kitchen/Food\n https://www.instagram.com/ujawalskitchen/"));
+        terms.add(new Term("Picture of Bhindi Massala","Photo by:- Krishie’s eat\n https://www.instagram.com/foodcheersforever/"));
+        terms.add(new Term("Picture of Paneer Bhurji","Photo by:- Sumedh Kanade | Food Blogger \n https://www.instagram.com/gourmetmusafir/"));
+
         //layout manager
 //        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

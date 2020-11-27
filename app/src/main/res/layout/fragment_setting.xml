@@ -3,15 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColor"
     android:orientation="vertical"
     tools:context=".settingFragment">
 
-<!--    <SeekBar-->
-<!--        android:id="@+id/FontSeekBar"-->
-<!--        android:layout_width="299dp"-->
-<!--        android:layout_height="143dp" />-->
-<!--    <SeekBar-->
-<!--        android:id="@+id/ImageSeekBar"-->
-<!--        android:layout_width="299dp"-->
-<!--        android:layout_height="143dp" />-->
+    <TextView
+        android:id="@+id/fontSizeChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/change_font_size"
+        android:textColor="#F6F6F6"
+        android:textSize="@dimen/submit" />
+
+    <SeekBar
+        android:id="@+id/FontSeekBar"
+        android:layout_width="299dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#ECDFDF"
+        android:paddingStart="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:progressBackgroundTint="#F6F0F0"
+        android:progressTint="@color/colorAccent"
+        android:max="25"/>
+
+    <TextView
+        android:id="@+id/imageSizeChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/change_image_size"
+        android:textColor="#F6F6F6"
+        android:textSize="@dimen/submit" />
+
+    <SeekBar
+        android:id="@+id/ImageSeekBar"
+        android:layout_width="299dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#ECDFDF"
+        android:paddingStart="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:progressBackgroundTint="#F6F0F0"
+        android:progressTint="@color/colorAccent"
+        android:max="25"/>
 </LinearLayout>

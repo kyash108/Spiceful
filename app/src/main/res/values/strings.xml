@@ -32,4 +32,6 @@
     <string name="requestDishEmailHint">Please enter your email here</string>
     <string name="requestDishUsername">Please enter your name here</string>
     <string name="recipeRequested">Recipe(s) Requested</string>
+    <string name="change_font_size">Change Font Size</string>
+    <string name="change_image_size">Change Image Size</string>
 </resources>

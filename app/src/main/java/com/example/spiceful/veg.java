@@ -215,10 +215,10 @@ public class veg extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return vegContentFragment.newInstance(R.drawable.dal,"Aloo Matar Curry");
-                case 1: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Matar Paneer Curry");
-                case 2: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Bhindi Massala");
-                case 3: return vegContentFragment.newInstance(R.drawable.ic_baseline_map_24,"Paneer Bhurji");
+                case 0: return vegContentFragment.newInstance(R.drawable.alloomatar,"Aloo Matar Curry");
+                case 1: return vegContentFragment.newInstance(R.drawable.matarpaneer,"Matar Paneer Curry");
+                case 2: return vegContentFragment.newInstance(R.drawable.bhindi,"Bhindi Massala");
+                case 3: return vegContentFragment.newInstance(R.drawable.paneerbhurji,"Paneer Bhurji");
 
                 default: return vegContentFragment.newInstance(R.drawable.facebook,"Mutter Paneer Curry");
 

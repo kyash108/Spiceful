@@ -24,7 +24,8 @@ public class settingFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    int textSize = 20;
+    TextView textViewFont;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -68,7 +69,30 @@ public class settingFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
-
+//        textViewFont = view.findViewById(R.id.fontSizeChange);
+//        SeekBar seekBar= view.findViewById(R.id.fontSeekbar);
+//        textViewFont.setTextSize(textSize);
+//        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//
+//            int progressNew = 0;
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                textSize = textSize+(progress - progressNew);
+//                progressNew = progress;
+//                textViewFont.setText(textSize);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//                textViewFont.setText(progressNew +"/"+seekBar.getMax());
+//
+//            }
+//        });
 
         return view;
     }
