@@ -1,11 +1,8 @@
 package com.example.spiceful;
-
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,22 +59,20 @@ public class Credit extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_credit, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
         ArrayList<Term> terms = new ArrayList<>();
-        terms.add(new Term("Picture of Butter Chicken", "Photo by:- The Endless Meal\n https://www.instagram.com/theendlessmeal/"));
-        terms.add(new Term("Picture of Chicken Biryani","Photo by:- Kitchen Sanctuary\n https://www.instagram.com/kitchensanctuary/"));
-        terms.add(new Term("Picture of Kadhai Chicken","Photo by:- Farha Ambreen\n https://www.instagram.com/fariamby/"));
-        terms.add(new Term("Picture of Aloo Matar Curry","Photo by:- Udai Sareen\n https://www.instagram.com/tasteofculturesindia/"));
-        terms.add(new Term("Picture of Matar Paneer Curry","Photo by:- Ujawal's Kitchen/Food\n https://www.instagram.com/ujawalskitchen/"));
-        terms.add(new Term("Picture of Bhindi Massala","Photo by:- Krishie’s eat\n https://www.instagram.com/foodcheersforever/"));
-        terms.add(new Term("Picture of Paneer Bhurji","Photo by:- Sumedh Kanade | Food Blogger \n https://www.instagram.com/gourmetmusafir/"));
+        terms.add(new Term(R.drawable.butterchicken, " Picture of- Butter Chicken \n Photo by:- The Endless Meal \n https://www.instagram.com/theendlessmeal/"));
+        terms.add(new Term(R.drawable.chickenbiryani," Picture of- Chicken Biryani\n Photo by:- Kitchen Sanctuary\n https://www.instagram.com/kitchensanctuary/"));
+        terms.add(new Term(R.drawable.kadhaichicken," Picture of- Kadhai Chicken \n Photo by:- Farha Ambreen\n https://www.instagram.com/fariamby/"));
+        terms.add(new Term(R.drawable.alloomatar," Picture of- Aloo Mattar\n Photo by:- Udai Sareen\n https://www.instagram.com/tasteofculturesindia/"));
+        terms.add(new Term(R.drawable.matarpaneer," Picture of- Matar Paneer\n Photo by:- Ujawal's Kitchen/Food\n https://www.instagram.com/ujawalskitchen/"));
+        terms.add(new Term(R.drawable.bhindi," Picture of- Bhindi \n Photo by:- Krishie’s eat\n https://www.instagram.com/foodcheersforever/"));
+        terms.add(new Term(R.drawable.paneerbhurji," Picture of- Paneer Bhurji \n Photo by:- Sumedh Kanade | Food Blogger \n https://www.instagram.com/gourmetmusafir/"));
 
-        //layout manager
-//        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //adaptor
         recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms));
         return view;
     }

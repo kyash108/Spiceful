@@ -3,6 +3,7 @@ package com.example.spiceful;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,7 +27,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Term term = terms.get(position);
-        holder.name.setText(term.getName());
+        holder.name.setImageResource(term.getName());
         holder.description.setText(term.getDescription());
     }
 
@@ -39,7 +40,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder{
-        protected TextView name;
+        protected ImageView name;
         protected TextView description;
 
         public CustomViewHolder(@NonNull View itemView) {

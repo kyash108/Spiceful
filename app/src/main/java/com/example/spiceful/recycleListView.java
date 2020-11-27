@@ -1,13 +1,9 @@
 package com.example.spiceful;
 
-public class Term {
+public class recycleListView {
     private int name;
-    private  String description;
+    private String description;
 
-    public Term(int name, String description) {
-        this.name = name;
-        this.description = description;
-    }
 
     public int getName() {
         return name;
@@ -24,4 +20,10 @@ public class Term {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public recycleListView(int name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
 }
