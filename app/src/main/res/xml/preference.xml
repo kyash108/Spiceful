@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SeekBarPreference
-        android:id="@+id/fontSeekbar"
-        android:key="seekbar"
-        android:title="Adjust the font"
-        android:max="15"
-        android:defaultValue="12">
-
-    </SeekBarPreference>
-    <SeekBarPreference
-        android:id="@+id/imageSeekbar"
-        android:key="seekbar"
-        android:title="Adjust the Image size"
-        android:max="15"
-        android:defaultValue="12">
-    </SeekBarPreference>
 
 </PreferenceScreen>
+
+

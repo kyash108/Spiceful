@@ -64,7 +64,7 @@ public class share extends Fragment {
         View view= inflater.inflate(R.layout.nav_header_main, container, false);
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        String shareBody="Download this application from https://ykumar.scweb.ca/";
+        String shareBody="Download this application from https://ykumar.scweb.ca/Spiceful.apk";
         String shareSub="Spiceful Recipe App";
         shareIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
         shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody);

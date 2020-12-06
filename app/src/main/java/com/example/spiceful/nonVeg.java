@@ -11,6 +11,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -30,7 +32,6 @@ public class nonVeg extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     TextView description;
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -188,13 +189,18 @@ public class nonVeg extends Fragment {
         nonVegListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                description.setText(((ListViewItem)nonVegListView.getItemAtPosition(position)).getDescription());
+             description.setText(((ListViewItem)nonVegListView.getItemAtPosition(position)).getDescription());
             }
         });
 
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.novegPhotos);
         viewPager.setAdapter(adapter);
+
+
+        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.slideleft);
+        view.startAnimation(animation);
+
         return view;
     }
     public static class CustomViewPagerAdapter extends FragmentPagerAdapter {

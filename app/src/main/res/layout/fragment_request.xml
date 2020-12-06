@@ -36,6 +36,7 @@
             android:ems="10"
             android:hint="@string/requestDishUsername"
             android:inputType="textPersonName"
+            android:textSize="14dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:shadowColor="#F8F6F6"
@@ -71,6 +72,7 @@
             android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:hint="@string/requestDishEmailHint"
+            android:textSize="14dp"
             android:inputType="textPersonName"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -89,7 +91,7 @@
 
         <TextView
             android:id="@+id/requestDishName"
-            android:layout_width="133dp"
+            android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="10dp"
@@ -101,7 +103,7 @@
 
         <EditText
             android:id="@+id/requestDishNameInput"
-            android:layout_width="wrap_content"
+            android:layout_width="133dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:autofillHints=""
@@ -115,7 +117,8 @@
             android:textColor="#F1EDED"
             android:textColorHighlight="#F4EFEF"
             android:textColorHint="#F6F1F1"
-            android:textColorLink="#F3ECEC" />
+            android:textColorLink="#F3ECEC"
+            android:textSize="14dp" />
 
     </LinearLayout>
 

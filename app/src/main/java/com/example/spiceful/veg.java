@@ -11,6 +11,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -202,6 +204,10 @@ public class veg extends Fragment {
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.photos);
         viewPager.setAdapter(adapter);
+
+        Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.animate_in);
+        view.startAnimation(animation);
+
         return view;
     }
 
