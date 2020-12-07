@@ -35,4 +35,5 @@
     <string name="change_font_size">Change Font Size</string>
     <string name="change_image_size">Change Image Size</string>
         <string name="theendlessmeal"><a href="https://www.instagram.com/theendlessmeal/">The Endless Meal</a></string>
+    <string name="adjust_brightness">Adjust Brightness</string>
 </resources>
