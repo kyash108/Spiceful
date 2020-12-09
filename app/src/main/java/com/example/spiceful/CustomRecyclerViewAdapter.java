@@ -1,9 +1,13 @@
 package com.example.spiceful;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,15 +17,18 @@ import java.util.ArrayList;
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecyclerViewAdapter.CustomViewHolder> {
     private ArrayList<Term> terms;
+    private Context context;
 
-    public CustomRecyclerViewAdapter(ArrayList<Term> terms){
+    public CustomRecyclerViewAdapter(ArrayList<Term> terms, Context context){
         this.terms = terms;
+        this.context = context;
     }
     @NonNull
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_recycle_display,null);
-       return  new CustomViewHolder(view);
+        view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+       return  new CustomViewHolder(view, context);
     }
 
     @Override
@@ -43,10 +50,29 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         protected ImageView name;
         protected TextView description;
 
-        public CustomViewHolder(@NonNull View itemView) {
+        public CustomViewHolder(@NonNull View itemView, Context context) {
             super(itemView);
             this.name = itemView.findViewById(R.id.name);
+            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+            String imageSize = sharedPrefs.getString("imageSize","Medium");
+            switch (imageSize){
+                case "Small": name.getLayoutParams().height = 200;
+                    break;
+                case "Medium": name.getLayoutParams().height = 400;
+                    break;
+                case "Large": name.getLayoutParams().height = 600;
+                    break;
+            }
             this.description = itemView.findViewById(R.id.descriptionItem);
+            String fontSizeChoice = sharedPrefs.getString("fontSize","18sp");
+            switch (fontSizeChoice){
+                case "18sp" : description.setTextSize(18);
+                break;
+                case "22sp" : description.setTextSize(22);
+                break;
+                case "24sp" : description.setTextSize(24);
+                break;
+            }
         }
     }
 }

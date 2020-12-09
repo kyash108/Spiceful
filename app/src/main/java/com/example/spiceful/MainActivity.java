@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.veg, R.id.nonVeg, R.id.request, R.id.contactUs, R.id.share, R.id.credit,R.id.setting)
+                R.id.veg, R.id.nonVeg, R.id.request, R.id.contactUs, R.id.share, R.id.credit)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.settings) {
-            Intent i = new Intent(this,settingsFragment.class);
+            Intent i = new Intent(this,SettingsActivity.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);

@@ -86,7 +86,7 @@ public class Credit extends Fragment {
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms));
+        recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms,getContext()));
 
 
         return view;
