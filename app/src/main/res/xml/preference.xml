@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:foregroundTint="#FBFAFA">
 
     <ListPreference
         android:defaultValue="true"
         android:entries="@array/fontSize"
         android:entryValues="@array/fontSize"
+        android:hapticFeedbackEnabled="true"
         android:key="fontSize"
-        android:title="Font Size"
-        android:summary = "Adjust the font size for credit page"/>
+        android:summary="Adjust the font size for credit page"
+        android:title="Font Size" />
     <ListPreference
         android:defaultValue="true"
         android:entries="@array/imageSize"
         android:entryValues="@array/imageSize"
+        android:hapticFeedbackEnabled="true"
         android:key="imageSize"
-        android:title="Image Size"
-        android:summary = "Adjust the image size for credit page"/>
+        android:summary="Adjust the image size for credit page"
+        android:title="Image Size" />
 </PreferenceScreen>
 
 

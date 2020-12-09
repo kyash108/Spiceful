@@ -31,6 +31,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
        return  new CustomViewHolder(view, context);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         Term term = terms.get(position);
@@ -75,4 +76,5 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             }
         }
     }
+
 }

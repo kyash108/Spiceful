@@ -1,4 +1,6 @@
 package com.example.spiceful;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.appcompat.app.ActionBar;
@@ -32,6 +34,15 @@ public class SettingsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        Fragment currentFragment = getFragmentManager().findFragmentByTag("YourFragmentTag");
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.detach(currentFragment);
+        fragmentTransaction.attach(currentFragment);
+        fragmentTransaction.commit();
+        super.onBackPressed();
+    }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
         @Override
