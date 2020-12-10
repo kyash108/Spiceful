@@ -26,7 +26,11 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class nonVeg extends Fragment {
-
+    /**
+     * Created the page
+     * @author- Yash Kumar
+     * @Date - 5th Nov
+     */
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -67,6 +71,11 @@ public class nonVeg extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    /**
+     * Created the list view for non veg fragment
+     * @author- Yash Kumar
+     * @Date - 24 Nov
+     */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -197,6 +206,11 @@ public class nonVeg extends Fragment {
         ViewPager viewPager = view.findViewById(R.id.novegPhotos);
         viewPager.setAdapter(adapter);
 
+        /**
+         * Created the animation non veg fragment
+         * @author - Yash Kumar
+         * @Date - 06 Dec
+         */
 
         Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.slideleft);
         view.startAnimation(animation);

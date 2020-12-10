@@ -30,6 +30,12 @@ import java.util.ArrayList;
  */
 public class veg extends Fragment {
 
+    /**
+     * Created the page
+     * @author- Yash Kumar
+     * @Date - 5th Nov
+     */
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -77,6 +83,11 @@ public class veg extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_veg, container, false);
 
+        /**
+         * Created the list view for the veg fragment
+         * @author- Yash Kumar
+         * @Date - 20th Nov
+         */
         final ListView listView = view.findViewById(R.id.vegListView);
         description = view.findViewById(R.id.vegDescription);
         ArrayList<ListViewItem> dataTypeItemArrayList = new ArrayList<>();
@@ -205,6 +216,12 @@ public class veg extends Fragment {
         ViewPager viewPager = view.findViewById(R.id.photos);
         viewPager.setAdapter(adapter);
 
+        /**
+         * Created the animation the fragment
+         * @author - Yash Kumar
+         * @Date - 06 Dec
+         */
+
         Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.animate_in);
         view.startAnimation(animation);
 
@@ -216,7 +233,11 @@ public class veg extends Fragment {
         public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
         }
-
+        /**
+         * Created the view pager for the veg fragment
+         * @author- Yash Kumar
+         * @Date - 10th Nov
+         */
         @NonNull
         @Override
         public Fragment getItem(int position) {

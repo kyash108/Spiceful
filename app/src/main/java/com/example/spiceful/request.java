@@ -24,6 +24,11 @@ import com.google.android.material.snackbar.Snackbar;
  */
 public class request extends Fragment {
 
+    /**
+     * Created the page
+     * @author- Yash Kumar
+     * @Date - 5th Nov
+     */
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,6 +71,12 @@ public class request extends Fragment {
 
     }
 
+    /**
+     * Created the form for the request a recipe fragment
+     * @author- Yash Kumar
+     * @Date - 22 Nov
+     */
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -99,6 +110,11 @@ public class request extends Fragment {
 
         });
 
+        /**
+         * Created the animation the fragment
+         * @author - Yash Kumar
+         * @Date - 06 Dec
+         */
         Animation animation = AnimationUtils.loadAnimation(getContext(),R.anim.animate_out);
         view.startAnimation(animation);
 

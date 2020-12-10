@@ -62,6 +62,13 @@ public class Credit extends Fragment {
         }
     }
 
+    /**
+     * Created the content for credit fragment
+     * @author- Yash Kumar
+     * @Date - 24 Nov
+     */
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

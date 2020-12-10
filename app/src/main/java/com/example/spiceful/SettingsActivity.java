@@ -27,6 +27,12 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Code for the back button on the settings preference fragment
+     * @author - Yash Kumar
+     * @Date - 09 Dec
+     */
+
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -35,6 +41,12 @@ public class SettingsActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Refresh fragment code added to the button
+     * @author - Yash Kumar
+     * @Date - 09 Dec
+     */
 
     @Override
     public void onBackPressed() {

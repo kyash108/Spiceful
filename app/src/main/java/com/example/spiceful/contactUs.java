@@ -22,7 +22,11 @@ import android.widget.Toast;
  * create an instance of this fragment.
  */
 public class contactUs extends Fragment {
-
+    /**
+     * Created the page
+     * @author- Yash Kumar
+     * @Date - 5th Nov
+     */
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,6 +67,11 @@ public class contactUs extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    /**
+     * Created the buttons and intent for the contact us page
+     * @author- Yash Kumar
+     * @Date - 10th Nov
+     */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

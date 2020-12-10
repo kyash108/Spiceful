@@ -46,7 +46,11 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         }
         return 0;
     }
-
+    /**
+     * Code for the settings options
+     * @author - Yash Kumar
+     * @Date - 09 Dec
+     */
     class CustomViewHolder extends RecyclerView.ViewHolder{
         protected ImageView name;
         protected TextView description;

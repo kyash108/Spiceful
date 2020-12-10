@@ -41,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+        /**
+         * Created navigation drawer and added options in it
+         * @author- Yash Kumar
+         * @Date - 5th Nov
+         */
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.veg, R.id.nonVeg, R.id.request, R.id.contactUs, R.id.share, R.id.credit)
                 .setDrawerLayout(drawer)
@@ -50,7 +56,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-
+        /**
+         * Modified the code for floating fab button on the fragments
+         * @author- Yash Kumar
+         * @Date - 10th Nov
+         */
 
         FloatingActionButton message= findViewById(R.id.fab);
         message.setOnClickListener(new View.OnClickListener() {

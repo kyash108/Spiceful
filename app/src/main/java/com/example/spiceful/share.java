@@ -15,6 +15,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class share extends Fragment {
+    /**
+     * Created the page
+     * @author- Yash Kumar
+     * @Date - 5th Nov
+     */
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,6 +61,13 @@ public class share extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    /**
+     * Created the intent for the share fragment
+     * @author- Yash Kumar
+     * @Date - 22 Nov
+     */
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
